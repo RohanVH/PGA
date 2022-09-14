@@ -1,0 +1,528 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 14, 2022 at 08:04 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `pga`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_signin`
+--
+
+CREATE TABLE `admin_signin` (
+  `id` int(11) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin_signin`
+--
+
+INSERT INTO `admin_signin` (`id`, `email`, `password`) VALUES
+(1, 'chrisrohan.cr4@gmail.com', 'rohan29');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faculty_details`
+--
+
+CREATE TABLE `faculty_details` (
+  `id` int(11) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `contactno` varchar(13) NOT NULL,
+  `password` varchar(25) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `faculty_details`
+--
+
+INSERT INTO `faculty_details` (`id`, `name`, `email`, `contactno`, `password`) VALUES
+(1, 'ganesh', 'ganesh@gmail.com', '9901213213', '1'),
+(2, 'aparna', 'aparna@gmail.com', '9986735823', '1'),
+(3, 'reshma', 'reshma@gmail.com', '9686439959', '1'),
+(4, 'dwarkanath', 'dwarkanath@gmail.com', '9916155597', '1'),
+(5, 'shivakumar', 'shivakumar@gmail.com', '9060900986', '1'),
+(6, 'sridevi', 'sridevi@gmail.com', '9035358066', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faculty_signin`
+--
+
+CREATE TABLE `faculty_signin` (
+  `id` int(11) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `faculty_signin`
+--
+
+INSERT INTO `faculty_signin` (`id`, `email`, `password`) VALUES
+(1, 'ganesh@gmail.com', '1'),
+(2, 'aparna@gmail.com', '1'),
+(3, 'reshma@gmail.com', '1'),
+(4, 'dwarkanath@gmail.com', '1'),
+(5, 'shivakumar@gmail.com', '1'),
+(6, 'sridevi@gmail.com', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hod_signin`
+--
+
+CREATE TABLE `hod_signin` (
+  `id` int(11) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hod_signin`
+--
+
+INSERT INTO `hod_signin` (`id`, `name`, `email`, `password`) VALUES
+(1, 'Ganesh', 'ganesh@gmail.com', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lecture1`
+--
+
+CREATE TABLE `lecture1` (
+  `id` int(11) NOT NULL,
+  `student name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `semester` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lecture1`
+--
+
+INSERT INTO `lecture1` (`id`, `student name`, `email`, `semester`) VALUES
+(8, 'tejas', 'tejashassan2k@gmail.com', '1st sem'),
+(57, 'fadrik', 'fadrick@gmail.com', '4th sem'),
+(38, 'madhu', 'madhu@gmail.com', '2nd sem'),
+(3, 'shashi', 'shashi@gmail.com', '3rd sem'),
+(37, 'sneha', 'sneha@gmail.com', '3rd sem'),
+(30, 'harish', 'harish@gmail.com', '4th sem'),
+(20, 'anjana', 'anjana@gmail.com', '1st sem'),
+(33, 'jeevan', 'jeevan@gmail.com', '1st sem'),
+(58, 'jafar', 'jafar@gmail.com', '3rd sem'),
+(5, 'anand', 'anand@gmail.com', '1st sem');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lecture2`
+--
+
+CREATE TABLE `lecture2` (
+  `id` int(11) NOT NULL,
+  `student name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `semester` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lecture2`
+--
+
+INSERT INTO `lecture2` (`id`, `student name`, `email`, `semester`) VALUES
+(34, 'jeevitha', 'jeevitha@gmail.com', '2nd sem'),
+(2, 'komal', 'komal@gmail.com', '2nd sem'),
+(56, 'anjali', 'anajali@gmail.com', '2nd sem'),
+(21, 'jasmin', 'jasmin@gmail.com', '4th sem'),
+(31, 'mutturaj', 'muttu@gmail.com', '3rd sem'),
+(48, 'deepika', 'deepika@gmail.com', '2nd sem'),
+(47, 'raju', 'raju@gmail.com', '1st sem'),
+(43, 'chethan', 'chethan@gmail.com', '4th sem'),
+(53, 'nandeesh', 'nandeesh@gmail.com', '3rd sem'),
+(7, 'teju', 'teju@gmail.com', '4th sem');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lecture3`
+--
+
+CREATE TABLE `lecture3` (
+  `id` int(11) NOT NULL,
+  `student name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `semester` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lecture3`
+--
+
+INSERT INTO `lecture3` (`id`, `student name`, `email`, `semester`) VALUES
+(50, 'sanjay', 'sanjay@gmail.com', '3rd sem'),
+(22, 'nisha', 'nisha@gmail.com', '2nd sem'),
+(19, 'vishal', 'vishal@gmail.com', '2nd sem'),
+(15, 'vijay', 'vijay@gmail.com', '2nd sem'),
+(25, 'sachin', 'sachin@gmail.com', '3rd sem'),
+(11, 'Mrinal', 'mrinalshetkar25@gmail.com', '3rd sem'),
+(32, 'sakshi', 'sakshi@gmail.com', '1st sem'),
+(24, 'yogesh', 'yogesh@gmail.com', '3rd sem'),
+(42, 'guruji', 'guruji@gmail.com', '3rd sem'),
+(44, 'darshan', 'darshan@gmail.com', '2nd sem');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lecture4`
+--
+
+CREATE TABLE `lecture4` (
+  `id` int(11) NOT NULL,
+  `student name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `semester` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lecture4`
+--
+
+INSERT INTO `lecture4` (`id`, `student name`, `email`, `semester`) VALUES
+(59, 'manoj', 'manoj@gmail.com', '3rd sem'),
+(41, 'Rohanv', 'roahnv@gmail.com', '3rd sem'),
+(18, 'ammu', 'ammu@gmail.com', '1st sem'),
+(49, 'hema', 'hemav@gmail.com', '2nd sem'),
+(27, 'rishi', 'rishi@gmail.com', '1st sem'),
+(29, 'harsha', 'harsha@gmail.com', '4th sem'),
+(26, 'sandeep', 'sandeep@gmail.com', '3rd sem'),
+(46, 'yogi', 'yogi@gmail.com', '3rd sem'),
+(1, 'chris rohan', 'chrisrohan.cr4@gmail.com', '1st sem'),
+(39, 'thanu', 'thanu@gmail.com', '1st sem');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lecture5`
+--
+
+CREATE TABLE `lecture5` (
+  `id` int(11) NOT NULL,
+  `student name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `semester` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lecture5`
+--
+
+INSERT INTO `lecture5` (`id`, `student name`, `email`, `semester`) VALUES
+(10, 'priyanka', 'priyanka@gmail.com', '3rd sem'),
+(16, 'ruthu', 'ruthu@gmail.com', '3rd sem'),
+(23, 'jawid', 'jawid@gmail.com', '3rd sem'),
+(6, 'shashidars', 'shashidar@gmail.com', '2nd sem'),
+(9, 'priya', 'priya@gmail.com', '2nd sem'),
+(40, 'sindu', 'sindu@gmail.com', '4th sem'),
+(55, 'anju', 'anju@gmail.com', '1st sem'),
+(58, 'jafar', 'jafar@gmail.com', '3rd sem'),
+(50, 'sanjay', 'sanjay@gmail.com', '3rd sem'),
+(44, 'darshan', 'darshan@gmail.com', '2nd sem');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lecture6`
+--
+
+CREATE TABLE `lecture6` (
+  `id` int(11) NOT NULL,
+  `student name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `semester` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lecture6`
+--
+
+INSERT INTO `lecture6` (`id`, `student name`, `email`, `semester`) VALUES
+(13, 'akash', 'akash@gmail.com', '3rd sem'),
+(28, 'sona', 'sona@gmail.com', '3rd sem'),
+(52, 'neham', 'neham@gmail.com', '2nd sem'),
+(35, 'sanu', 'sanu@gmail.com', '3rd sem'),
+(55, 'anju', 'anju@gmail.com', '1st sem'),
+(45, 'gagana', 'gagana@gmail.com', '3rd sem'),
+(40, 'sindu', 'sindu@gmail.com', '4th sem'),
+(4, 'karthik', 'karthik@gmail.com', '4th sem'),
+(17, 'ajay', 'ajay@gmail.com', '3rd sem'),
+(54, 'hemanth', 'hemanth@gmail.com', '1st sem');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sem2`
+--
+
+CREATE TABLE `sem2` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sem2`
+--
+
+INSERT INTO `sem2` (`id`, `name`, `email`) VALUES
+(1, 'Ardeen', 'afigg0@skyrock.com'),
+(2, 'Larissa', 'lmcquirter1@blog.com'),
+(3, 'George', 'gprene2@shutterfly.com'),
+(4, 'Evelin', 'emurch3@edublogs.org'),
+(5, 'Sheila-kathryn', 'sportugal4@un.org'),
+(6, 'Moyra', 'mproudley5@nyu.edu'),
+(7, 'Loreen', 'lnazareth6@ebay.com'),
+(8, 'Johnette', 'jtanner7@go.com'),
+(9, 'Euell', 'ewoosnam8@dailymotion.com'),
+(10, 'Juli', 'jmcelory9@domainmarket.com'),
+(11, 'Monroe', 'mmeekinsa@mediafire.com'),
+(12, 'Marten', 'mgreystockb@tinypic.com'),
+(13, 'Guy', 'gocuddiec@vistaprint.com'),
+(14, 'Dru', 'dgolsthorpd@hostgator.com'),
+(15, 'Carolan', 'cluscotte@goo.ne.jp'),
+(16, 'Moyra', 'mrealphf@latimes.com'),
+(17, 'Riane', 'rbrethertong@devhub.com'),
+(18, 'Christiane', 'codamh@sogou.com'),
+(19, 'Phillip', 'pdmiterkoi@freewebs.com'),
+(20, 'Pembroke', 'pohaganj@wordpress.org'),
+(21, 'Kayley', 'kbeiderbeckek@macromedia.com'),
+(22, 'Malchy', 'mvitteryl@answers.com'),
+(23, 'Alfreda', 'ayglesiasm@indiegogo.com'),
+(24, 'Elsy', 'ewhissonn@whitehouse.gov'),
+(25, 'Shirleen', 'smityakovo@nature.com'),
+(26, 'Prissie', 'ptaverinerp@hugedomains.com'),
+(27, 'Iorgos', 'ilinkq@yahoo.co.jp'),
+(28, 'Rhiamon', 'rcarvilr@irs.gov'),
+(29, 'Thalia', 'tsynckes@miibeian.gov.cn'),
+(30, 'Kath', 'kwortmant@behance.net'),
+(31, 'Kimberly', 'kmacneillyu@ucla.edu'),
+(32, 'Mace', 'mbarthramv@adobe.com'),
+(33, 'Dennie', 'dhaithw@myspace.com'),
+(34, 'Haskel', 'hmcgennx@paginegialle.it'),
+(35, 'Aprilette', 'acostelowy@ihg.com'),
+(36, 'Binny', 'bbocockz@weibo.com'),
+(37, 'Hailey', 'hheaford10@cdbaby.com'),
+(38, 'Gwendolen', 'gcaplis11@meetup.com'),
+(39, 'Chad', 'cpetrasch12@google.es'),
+(40, 'Leanor', 'lkettlestringes13@samsung.com'),
+(41, 'Rosene', 'rerik14@npr.org'),
+(42, 'Shay', 'sboulde15@howstuffworks.com'),
+(43, 'Clary', 'cliddicoat16@mozilla.com'),
+(44, 'Athene', 'awike17@ebay.co.uk'),
+(45, 'Hilarius', 'hthirtle18@ifeng.com'),
+(46, 'Mahmud', 'mfeldberg19@de.vu'),
+(47, 'Tobey', 'tgoudman1a@sciencedirect.com'),
+(48, 'Ailina', 'akellert1b@lycos.com'),
+(49, 'Barby', 'bfenelow1c@addthis.com'),
+(50, 'Nerti', 'nambroziak1d@google.fr'),
+(51, 'Marris', 'mcovino1e@usa.gov'),
+(52, 'Webb', 'wwalshe1f@parallels.com'),
+(53, 'Nicolis', 'nfieldgate1g@marketwatch.com'),
+(54, 'Craggie', 'cclaypole1h@tumblr.com'),
+(55, 'Sabina', 'spenchen1i@wsj.com'),
+(56, 'Lavina', 'lfibben1j@soundcloud.com'),
+(57, 'Roldan', 'rharry1k@amazonaws.com'),
+(58, 'Abe', 'apendrick1l@dropbox.com'),
+(59, 'Marget', 'mparram1m@xrea.com'),
+(60, 'Herbert', 'hkarel1n@plala.or.jp');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_signin`
+--
+
+CREATE TABLE `student_signin` (
+  `id` int(60) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student_signin`
+--
+
+INSERT INTO `student_signin` (`id`, `email`, `password`) VALUES
+(1, 'chrisrohan.cr4@gmail.com', '1'),
+(2, 'komal@gmail.com', '1'),
+(3, 'shashi@gmail.com', '1'),
+(4, 'karthik@gmail.com', '1'),
+(5, 'anand@gmail.com', '1'),
+(6, 'shashidar@gmail.com', '1'),
+(7, 'teju@gmail.com', '1'),
+(8, 'tejashassan2k@gmail.com', '1'),
+(9, 'priya@gmail.com', '1'),
+(10, 'priyanka@gmail.com', '1'),
+(11, 'mrinalshetkar25@gmail.com', '1'),
+(12, 'bhavya@gmail.com', '1'),
+(13, 'akash@gmail.com', '1'),
+(14, 'kamal@gmail.com', '1'),
+(15, 'vijay@gmail.com', '1'),
+(16, 'ruthu@gmail.com', '1'),
+(17, 'ajay@gmail.com', '1'),
+(18, 'ammu@gmail.com', '1'),
+(19, 'vishal@gmail.com', '1'),
+(20, 'anjana@gmail.com', '1'),
+(21, 'jasmin@gmail.com', '1'),
+(22, 'nisha@gmail.com', '1'),
+(23, 'jawid@gmail.com', '1'),
+(24, 'yogesh@gmail.com', '1'),
+(25, 'sachin@gmail.com', '1'),
+(26, 'sandeep@gmail.com', '1'),
+(27, 'rishi@gmail.com', '1'),
+(28, 'sona@gmail.com', '1'),
+(29, 'harsha@gmail.com', '1'),
+(30, 'harish@gmail.com', '1'),
+(31, 'muttu@gmail.com', '1'),
+(32, 'sakshi@gmail.com', '1'),
+(33, 'jeevan@gmail.com', '1'),
+(34, 'jeevitha@gmail.com', '1'),
+(35, 'sanu@gmail.com', '1'),
+(36, 'guna@gmail.com', '1'),
+(37, 'sneha@gmail.com', '1'),
+(38, 'madhu@gmail.com', '1'),
+(39, 'thanu@gmail.com', '1'),
+(40, 'sindu@gmail.com', '1'),
+(41, 'roahnv@gmail.com', '1'),
+(42, 'guruji@gmail.com', '1'),
+(43, 'chethan@gmail.com', '1'),
+(44, 'darshan@gmail.com', '1'),
+(45, 'gagana@gmail.com', '1'),
+(46, 'yogi@gmail.com', '1'),
+(47, 'raju@gmail.com', '1'),
+(48, 'deepika@gmail.com', '1'),
+(49, 'hemav@gmail.com', '1'),
+(50, 'sanjay@gmail.com', '1'),
+(51, 'neha@gmail.com', '1'),
+(52, 'neham@gmail.com', '1'),
+(53, 'nandeesh@gmail.com', '1'),
+(54, 'hemanth@gmail.com', '1'),
+(55, 'anju@gmail.com', '1'),
+(56, 'anajali@gmail.com', '1'),
+(57, 'fadrick@gmail.com', '1'),
+(58, 'jafar@gmail.com', '1'),
+(59, 'manoj@gmail.com', '1'),
+(60, 'kavitha@gmail.com', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_signup`
+--
+
+CREATE TABLE `student_signup` (
+  `id` int(60) NOT NULL,
+  `name` text NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `semester` varchar(25) NOT NULL,
+  `contactno` varchar(13) NOT NULL,
+  `password` varchar(25) NOT NULL,
+  `cpassword` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student_signup`
+--
+
+INSERT INTO `student_signup` (`id`, `name`, `email`, `semester`, `contactno`, `password`, `cpassword`) VALUES
+(1, 'chris rohan', 'chrisrohan.cr4@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(2, 'komal', 'komal@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(3, 'shashi', 'shashi@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(4, 'karthik', 'karthik@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(5, 'anand', 'anand@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(6, 'shashidars', 'shashidar@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(7, 'teju', 'teju@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(8, 'tejas', 'tejashassan2k@gmail.com', '1st sem', '+919008252604', '1', '1'),
+(9, 'priya', 'priya@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(10, 'priyanka', 'priyanka@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(11, 'Mrinal', 'mrinalshetkar25@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(12, 'bhavya', 'bhavya@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(13, 'akash', 'akash@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(14, 'kamal', 'kamal@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(15, 'vijay', 'vijay@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(16, 'ruthu', 'ruthu@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(17, 'ajay', 'ajay@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(18, 'ammu', 'ammu@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(19, 'vishal', 'vishal@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(20, 'anjana', 'anjana@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(21, 'jasmin', 'jasmin@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(22, 'nisha', 'nisha@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(23, 'jawid', 'jawid@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(24, 'yogesh', 'yogesh@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(25, 'sachin', 'sachin@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(26, 'sandeep', 'sandeep@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(27, 'rishi', 'rishi@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(28, 'sona', 'sona@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(29, 'harsha', 'harsha@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(30, 'harish', 'harish@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(31, 'mutturaj', 'muttu@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(32, 'sakshi', 'sakshi@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(33, 'jeevan', 'jeevan@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(34, 'jeevitha', 'jeevitha@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(35, 'sanu', 'sanu@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(36, 'gunavthi', 'guna@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(37, 'sneha', 'sneha@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(38, 'madhu', 'madhu@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(39, 'thanu', 'thanu@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(40, 'sindu', 'sindu@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(41, 'Rohanv', 'roahnv@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(42, 'guruji', 'guruji@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(43, 'chethan', 'chethan@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(44, 'darshan', 'darshan@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(45, 'gagana', 'gagana@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(46, 'yogi', 'yogi@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(47, 'raju', 'raju@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(48, 'deepika', 'deepika@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(49, 'hema', 'hemav@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(50, 'sanjay', 'sanjay@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(51, 'neha', 'neha@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(52, 'neham', 'neham@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(53, 'nandeesh', 'nandeesh@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(54, 'hemanth', 'hemanth@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(55, 'anju', 'anju@gmail.com', '1st sem', '+916363642318', '1', '1'),
+(56, 'anjali', 'anajali@gmail.com', '2nd sem', '+916363642318', '1', '1'),
+(57, 'fadrik', 'fadrick@gmail.com', '4th sem', '+916363642318', '1', '1'),
+(58, 'jafar', 'jafar@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(59, 'manoj', 'manoj@gmail.com', '3rd sem', '+916363642318', '1', '1'),
+(60, 'kavitha', 'kavitha@gmail.com', '1st sem', '+916363642318', '1', '1');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
