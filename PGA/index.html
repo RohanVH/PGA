@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="https://drait.edu.in/assets/images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGA DR.AIT - LOGIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="ss.css" rel="stylesheet">
+</head>
+
+
+
+<body style="background-color: #262626">
+    <div class=" container-fluid d-flex justify-content-center bg-white">
+        <div style="max-height:200px; width: 800px;">
+            <img src="https://drait.edu.in/assets/images/full_logo-wide.png" alt="BMSIT LOGO" class="container-fluid">
+        </div>
+    </div>
+    <br>
+    <br><br>
+    <div class="container-fluid">
+        <h1 style="text-align:center;"><b id="hover-underline-animation"
+                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:rgb(162, 25, 25)">P<b
+                    style="color: white;">G</b>A</b></h1>
+        <h2>
+            <a href="" class="typewrite" data-period="2000" data-type='[ "(Project Guide Allotment)" ]'>
+                <span class="wrap"></span>
+            </a>
+        </h2>
+        <br>
+        <button class="tablink" onclick="openPage('Admin', this,'white')"><b id="hover-underline-animation"
+                style="color: black; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            ADMIN
+            </b></button>
+        <button class="tablink" onclick="openPage('Student', this, 'white')" id="defaultOpen"><b
+                id="hover-underline-animation"
+                style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">STUDENT</b></button>
+        <button class="tablink" onclick="openPage('Faculty', this, 'white')"><b id="hover-underline-animation"
+                style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">FACULTY</b></button>
+        <button class="tablink" onclick="openPage('HOD', this, 'white')"><b id="hover-underline-animation"
+                style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">HOD</b></button>
+
+        <div id="Admin" class="tabcontent">
+            <p class="h2 justify-content-center"
+                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;text-align: center;color:black;"><b
+                    id="hover-underline-animation">Admin Login</b>
+            </p>
+            <br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#adminsignin">
+                    SIGNIN
+                </button>
+
+                <!-- Modal -->
+                <!-- admin signin modal -->
+                <div class="modal fade" id="adminsignin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" >
+                        <div class="modal-content"style="border-style: ridge;border-color: black;">
+                            <div class="modal-header"
+                                style="background-image: url(media/admin.gif);background-repeat: no-repeat;background-size:500px;background-position: center;">
+                
+                                <h3 class="modal-title" id="staticBackdropLabel"><b style="color:white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">ADMIN SIGNIN</b></h3>   
+                                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                
+                            <!-- form -->
+                            <form action="admin_signin.php" method="post">
+                                <div class="modal-body bg-dark"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                
+                                    <label class="form-label">Email:</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                    <br>    
+                                    <label class="form-label">Password:</label>
+                                    <input type="password" class="form-control" name="password" required><br>
+                                    <p style="text-align: end;"><a href="forgotpassword_admin.html" style="color:white;text-decoration: none;">Forgot Password?</a></p>
+                                </div>
+                                <div class="modal-footer justify-content-center" style="background-image: url(media/admin.gif);background-repeat: no-repeat;background-size:500px;background-position: center;">
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                        <button class="btn btn-danger" type="submit" name="submit">Signin</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- student login and signup modal -->
+        <div id="Student" class="tabcontent">
+            <p class="h2 justify-content-center"
+                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;text-align: center;"><b
+                    id="hover-underline-animation">Student Login</b></p>
+            <br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#signin">
+                    SIGNIN
+                </button>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#signup">
+                    SIGNUP
+                </button>
+
+
+                <!-- signin -->
+                <div class="modal fade" id="signin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header"
+                                style="background-image: url(media/student.jpg);background-repeat: no-repeat;background-size:500px;background-position: center;">
+                                
+                                <h3 class="modal-title" id="staticBackdropLabel"><b
+                                        style="color:darkred;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                                        STUDENT SIGNIN</b></h3>
+                                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+
+                            </div>
+
+                            <!-- form -->
+                            <form action="student_signin.php" method="post">
+                                <div class="modal-body bg-dark"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                                       
+                                        <label class="form-label">Email:</label>
+                                        <input type="email" class="form-control" name="email" required>
+                                        <br>
+                                        <label class="form-label">Password:</label>
+                                        <input type="password" class="form-control" name="password" required>
+                                        <br>
+                                        <p style="text-align: end;"><a href="forgotpassword.html" style="color:white;text-decoration: none;">Forgot
+                                                Password?</a></p>
+                                    </div>
+                                    <div class="modal-footer justify-content-center">
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <button class="btn btn-danger" type="submit" name="submit">Signin</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- signup -->
+                <div class="modal fade" id="signup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header"
+                                style="background-image: url(media/student.jpg);background-repeat: no-repeat;background-size:500px;background-position: center;">
+                                <h3 class="modal-title" id="staticBackdropLabel"><b
+                                        style="color:darkred;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                                        STUDENT SIGNUP</b></h3>
+                                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                </div>
+                            <form action="student_signup.php" method="post">
+                                    <div class="modal-body bg-dark"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                                    <!-- form -->
+                                        <label class="form-label">Name:</label>
+                                        <input type="text" class="form-control" name="name" required>
+                                        <br>
+                                        <label class="form-label">Email:</label>
+                                        <input type="email" class="form-control" name="email" required>
+                                        <br>
+                                        <label class="form-label">Semester:</label>
+                                        <input class="form-control" list="datalistOptions" id="exampleDataList"
+                                            placeholder="Type to search..." name="semester" required>
+                                        <datalist id="datalistOptions">
+                                            <option value="1st sem">
+                                            <option value="2nd sem">
+                                            <option value="3rd sem">
+                                            <option value="4th sem">
+                                        </datalist>
+                                        <br>
+                                        <label class="form-label">Contact no:</label>
+                                        <input type="tel" class="form-control" value="+91" name="contactno" required>
+                                        <br>
+                                        <label class="form-label">Password:</label>
+                                        <input type="password" class="form-control" name="password" required>
+                                        <br>
+                                        <label class="form-label">Confirm Password:</label>
+                                        <input type="password" class="form-control" name="cpassword" required>
+                                    </div>
+                                    <div class="modal-footer justify-content-center">
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <button class="btn btn-danger" type="submit" name="submit">Signup</button>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Faculty login form modal-->
+        <div id="Faculty" class="tabcontent">
+            <p class="h2 justify-content-center"
+                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;text-align: center;"><b
+                    id="hover-underline-animation">Faculty Login</b></p>
+            <br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#facultysignin">
+                    SIGNIN
+                </button>
+
+                <!-- Modal -->
+                <!-- signin -->
+                <div class="modal fade" id="facultysignin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header"
+                                style="background-image: url(media/90.jpg);background-repeat: no-repeat;background-size: contain ;background-size:500px;background-position: center;">
+                
+                                <h3 class="modal-title" id="staticBackdropLabel"><strong
+                                        style="color:rgb(183, 12, 12);font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                                        FACULTY SIGNIN</strong></h3>    
+                                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                
+                            </div>
+                
+                            <!-- form -->
+                            <form action="lecture_signin.php" method="post">
+                                <div class="modal-body bg-dark"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                
+                                    <label class="form-label">Email:</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                    <br>
+                                    <label class="form-label">Password:</label>
+                                    <input type="password" class="form-control" name="password" required>
+                                    <br>
+                                    <p style="text-align: end;"><a href="forgotpassword.html" style="color:white;text-decoration: none;">Forgot
+                                            Password?</a></p>
+                                </div>
+                                <div class="modal-footer justify-content-center" style="background-image: url(media/90.jpg);background-repeat: no-repeat;background-size:1080px;background-position: left;">
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                        <button class="btn btn-danger" type="submit" name="submit">Signin</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- hod login form modal -->
+        <div id="HOD" class="tabcontent">
+            <p class="h2 justify-content-center"
+                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;text-align: center;"><b
+                    id="hover-underline-animation">HOD Login</b></p>
+            <br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hodsignin">
+                    SIGNIN
+                </button>
+
+                <!-- Modal -->
+                <!-- signin -->
+                <div class="modal fade" id="hodsignin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header"
+                                style="background-image: url(media/hod1.jpg);background-repeat: no-repeat;background-size: contain ;background-size:500px;background-position: center;">
+                
+                                <h3 class="modal-title" id="staticBackdropLabel"><b
+                                        style="color:rgb(195, 8, 8);font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                                        HOD SIGNIN</b></h3>
+                                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                
+                            </div>
+                
+                            <!-- form -->
+                            <form action="hod_signin.php" method="post">
+                                <div class="modal-body bg-dark"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                
+                                    <label class="form-label">Email:</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                    <br>
+                                    <label class="form-label">Password:</label>
+                                    <input type="password" class="form-control" name="password" required>
+                                    <br>
+                                    <p style="text-align: end;"><a href="forgotpassword.html" style="color:white;text-decoration: none;">Forgot
+                                            Password?</a></p>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                        <button class="btn btn-danger" type="submit" name="submit">Signin</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        // typing
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+    </script>
+
+
+</body>
+
+</html>
